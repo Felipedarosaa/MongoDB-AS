@@ -70,8 +70,14 @@ db.clients.insertOne({
   db.pizzas.deleteOne({ "id": 1 })
   db.bebidas.deleteOne({ "id": 1 })
   db.itens_pedido.deleteOne({ "id": 1 })
-  
-  
+
+
+  // Consulta Simples:
+  db.pizzas.find()
+
+ // Consulta com Condição:
+ db.pedidos.find({ "tipo_entrega": "delivery" })
+
   
   // Consulta usando Aggregate (join):
   db.pedidos.aggregate([
